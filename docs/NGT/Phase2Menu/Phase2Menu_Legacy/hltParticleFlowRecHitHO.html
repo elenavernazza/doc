@@ -1,0 +1,64 @@
+
+<html>
+ <head>
+  <title>Config Browser</title>
+  <style type="text/css">
+  ol {
+   font-family: Arial;
+   font-size: 10pt;
+   padding-left: 25px;
+  }
+  .sequence {
+   font-weight: bold;
+  }
+  .task {
+   font-weight: bold;
+  }
+  li.Path       {font-style:bold;   color: #03C;}
+  li.Task       {font-style:bold;   color: #3465A4;}
+  li.sequence   {font-style:bold;   color: #09F;}
+  li.task       {font-style:bold;   color: #FF6666;}
+  li.EDProducer {font-style:italic; color: #a80000;}
+  li.EDFilter   {font-style:bold; color: #F90;}
+  li.EDAnalyzer {font-style:italic; color: #360;}
+  li.SwitchProducer {font-style:italic; color: #4e9a06;}
+  li.SequenceIgnore {font-style:bold; color: #a800a8;}
+  li.SequenceNegation {font-style:bold; color: #a800a8;}
+  .github-link {
+      color: #ce5c00; /* Custom blue color */
+      text-decoration: none; /* Remove underline if desired */
+  }
+
+  .github-link:hover {
+      color: #4e9a06; /* Change color on hover */
+      text-decoration: underline; /* Optional hover effect */
+  }
+
+</style>
+ </head>
+
+ <body>
+<pre>
+cms.EDProducer("PFRecHitProducer",\ 
+    navigator = cms.PSet(\ 
+        hcalEnums = cms.vint32(3),\ 
+        name = cms.string('PFRecHitHCALDenseIdNavigator')\ 
+    ),\ 
+    producers = cms.VPSet(cms.PSet(\ 
+        name = cms.string('PFHORecHitCreator'),\ 
+        qualityTests = cms.VPSet(\ 
+            cms.PSet(\ 
+                name = cms.string('PFRecHitQTestThreshold'),\ 
+                threshold = cms.double(0.05)\ 
+            ),\ 
+            cms.PSet(\ 
+                cleaningThresholds = cms.vdouble(0.0),\ 
+                flags = cms.vstring('Standard'),\ 
+                maxSeverities = cms.vint32(11),\ 
+                name = cms.string('PFRecHitQTestHCALChannel')\ 
+            )\ 
+        ),\ 
+        src = cms.InputTag("hltHoreco")\ 
+    ))\ 
+)\ 
+

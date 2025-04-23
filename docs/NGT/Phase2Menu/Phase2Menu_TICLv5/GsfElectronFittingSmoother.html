@@ -1,0 +1,44 @@
+
+<html>
+ <head>
+  <title>Config Browser</title>
+  <style type="text/css">
+  ol {
+   font-family: Arial;
+   font-size: 10pt;
+   padding-left: 25px;
+  }
+  .sequence {
+   font-weight: bold;
+  }
+  .task {
+   font-weight: bold;
+  }
+  li.Path       {font-style:bold;   color: #03C;}
+  li.Task       {font-style:bold;   color: #3465A4;}
+  li.sequence   {font-style:bold;   color: #09F;}
+  li.task       {font-style:bold;   color: #FF6666;}
+  li.EDProducer {font-style:italic; color: #a80000;}
+  li.EDFilter   {font-style:bold; color: #F90;}
+  li.EDAnalyzer {font-style:italic; color: #360;}
+  li.SwitchProducer {font-style:italic; color: #4e9a06;}
+  li.SequenceIgnore {font-style:bold; color: #a800a8;}
+  li.SequenceNegation {font-style:bold; color: #a800a8;}
+  .github-link {
+      color: #ce5c00; /* Custom blue color */
+      text-decoration: none; /* Remove underline if desired */
+  }
+
+  .github-link:hover {
+      color: #4e9a06; /* Change color on hover */
+      text-decoration: underline; /* Optional hover effect */
+  }
+
+</style>
+ </head>
+
+ <body>
+<pre>
+cms.ESProducer("KFFittingSmootherESProducer",    BreakTrajWith2ConsecutiveMissing = cms.bool(True),    ComponentName = cms.string('GsfElectronFittingSmoother'),    EstimateCut = cms.double(-1),    Fitter = cms.string('GsfTrajectoryFitter'),    HighEtaSwitch = cms.double(5.0),    LogPixelProbabilityCut = cms.double(0),    MaxFractionOutliers = cms.double(0.3),    MaxNumberOfOutliers = cms.int32(3),    MinDof = cms.int32(2),    MinNumberOfHits = cms.int32(5),    MinNumberOfHitsHighEta = cms.int32(5),    NoInvalidHitsBeginEnd = cms.bool(True),    NoOutliersBeginEnd = cms.bool(False),    RejectTracks = cms.bool(True),    Smoother = cms.string('GsfTrajectorySmoother'),    appendToDataLabel = cms.string(''))<pre>
+</body>
+</html>

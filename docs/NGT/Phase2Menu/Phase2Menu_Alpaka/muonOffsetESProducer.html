@@ -1,0 +1,44 @@
+
+<html>
+ <head>
+  <title>Config Browser</title>
+  <style type="text/css">
+  ol {
+   font-family: Arial;
+   font-size: 10pt;
+   padding-left: 25px;
+  }
+  .sequence {
+   font-weight: bold;
+  }
+  .task {
+   font-weight: bold;
+  }
+  li.Path       {font-style:bold;   color: #03C;}
+  li.Task       {font-style:bold;   color: #3465A4;}
+  li.sequence   {font-style:bold;   color: #09F;}
+  li.task       {font-style:bold;   color: #FF6666;}
+  li.EDProducer {font-style:italic; color: #a80000;}
+  li.EDFilter   {font-style:bold; color: #F90;}
+  li.EDAnalyzer {font-style:italic; color: #360;}
+  li.SwitchProducer {font-style:italic; color: #4e9a06;}
+  li.SequenceIgnore {font-style:bold; color: #a800a8;}
+  li.SequenceNegation {font-style:bold; color: #a800a8;}
+  .github-link {
+      color: #ce5c00; /* Custom blue color */
+      text-decoration: none; /* Remove underline if desired */
+  }
+
+  .github-link:hover {
+      color: #4e9a06; /* Change color on hover */
+      text-decoration: underline; /* Optional hover effect */
+  }
+
+</style>
+ </head>
+
+ <body>
+<pre>
+cms.ESProducer("MuonOffsetESProducer",    appendToDataLabel = cms.string(''),    fromDD4hep = cms.bool(False),    names = cms.vstring(        'MuonCommonNumbering',        'MuonBarrel',        'MuonEndcap',        'MuonBarrelWheels',        'MuonBarrelStation1',        'MuonBarrelStation2',        'MuonBarrelStation3',        'MuonBarrelStation4',        'MuonBarrelSuperLayer',        'MuonBarrelLayer',        'MuonBarrelWire',        'MuonRpcPlane1I',        'MuonRpcPlane1O',        'MuonRpcPlane2I',        'MuonRpcPlane2O',        'MuonRpcPlane3S',        'MuonRpcPlane4',        'MuonRpcChamberLeft',        'MuonRpcChamberMiddle',        'MuonRpcChamberRight',        'MuonRpcEndcap1',        'MuonRpcEndcap2',        'MuonRpcEndcap3',        'MuonRpcEndcap4',        'MuonRpcEndcapSector',        'MuonRpcEndcapChamberB1',        'MuonRpcEndcapChamberB2',        'MuonRpcEndcapChamberB3',        'MuonRpcEndcapChamberC1',        'MuonRpcEndcapChamberC2',        'MuonRpcEndcapChamberC3',        'MuonRpcEndcapChamberE1',        'MuonRpcEndcapChamberE2',        'MuonRpcEndcapChamberE3',        'MuonRpcEndcapChamberF1',        'MuonRpcEndcapChamberF2',        'MuonRpcEndcapChamberF3',        'MuonRpcEndcapChamberG1',        'MuonRpcEndcapChamberH1',        'MuonEndcapStation1',        'MuonEndcapStation2',        'MuonEndcapStation3',        'MuonEndcapStation4',        'MuonEndcapSubrings',        'MuonEndcapSectors',        'MuonEndcapLayers',        'MuonEndcapRing1',        'MuonEndcapRing2',        'MuonEndcapRing3',        'MuonEndcapRingA',        'MuonGEMEndcap',        'MuonGEMEndcap2',        'MuonGEMSector',        'MuonGEMChamber',        'MuonGE0Sector',        'MuonGE0Layer',        'MuonGE0Chamber'    ))<pre>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+<html>
+ <head>
+  <title>Config Browser</title>
+  <style type="text/css">
+  ol {
+   font-family: Arial;
+   font-size: 10pt;
+   padding-left: 25px;
+  }
+  .sequence {
+   font-weight: bold;
+  }
+  .task {
+   font-weight: bold;
+  }
+  li.Path       {font-style:bold;   color: #03C;}
+  li.Task       {font-style:bold;   color: #3465A4;}
+  li.sequence   {font-style:bold;   color: #09F;}
+  li.task       {font-style:bold;   color: #FF6666;}
+  li.EDProducer {font-style:italic; color: #a80000;}
+  li.EDFilter   {font-style:bold; color: #F90;}
+  li.EDAnalyzer {font-style:italic; color: #360;}
+  li.SwitchProducer {font-style:italic; color: #4e9a06;}
+  li.SequenceIgnore {font-style:bold; color: #a800a8;}
+  li.SequenceNegation {font-style:bold; color: #a800a8;}
+  .github-link {
+      color: #ce5c00; /* Custom blue color */
+      text-decoration: none; /* Remove underline if desired */
+  }
+
+  .github-link:hover {
+      color: #4e9a06; /* Change color on hover */
+      text-decoration: underline; /* Optional hover effect */
+  }
+
+</style>
+ </head>
+
+ <body>
+<pre>
+cms.EDProducer("CAHitTripletEDProducer",\ 
+    CAHardPtCut = cms.double(0.3),\ 
+    CAPhiCut = cms.double(0.1),\ 
+    CAThetaCut = cms.double(0.015),\ 
+    SeedComparitorPSet = cms.PSet(\ 
+        ComponentName = cms.string('none')\ 
+    ),\ 
+    doublets = cms.InputTag("hltIter2Phase2L3FromL1TkMuonPixelHitDoublets"),\ 
+    extraHitRPhitolerance = cms.double(0.032),\ 
+    maxChi2 = cms.PSet(\ 
+        enabled = cms.bool(True),\ 
+        pt1 = cms.double(0.8),\ 
+        pt2 = cms.double(8.0),\ 
+        value1 = cms.double(100.0),\ 
+        value2 = cms.double(6.0)\ 
+    ),\ 
+    useBendingCorrection = cms.bool(True)\ 
+)\ 
+

@@ -1,0 +1,168 @@
+
+<html>
+ <head>
+  <title>Config Browser</title>
+  <style type="text/css">
+  ol {
+   font-family: Arial;
+   font-size: 10pt;
+   padding-left: 25px;
+  }
+  .sequence {
+   font-weight: bold;
+  }
+  .task {
+   font-weight: bold;
+  }
+  li.Path       {font-style:bold;   color: #03C;}
+  li.Task       {font-style:bold;   color: #3465A4;}
+  li.sequence   {font-style:bold;   color: #09F;}
+  li.task       {font-style:bold;   color: #FF6666;}
+  li.EDProducer {font-style:italic; color: #a80000;}
+  li.EDFilter   {font-style:bold; color: #F90;}
+  li.EDAnalyzer {font-style:italic; color: #360;}
+  li.SwitchProducer {font-style:italic; color: #4e9a06;}
+  li.SequenceIgnore {font-style:bold; color: #a800a8;}
+  li.SequenceNegation {font-style:bold; color: #a800a8;}
+  .github-link {
+      color: #ce5c00; /* Custom blue color */
+      text-decoration: none; /* Remove underline if desired */
+  }
+
+  .github-link:hover {
+      color: #4e9a06; /* Change color on hover */
+      text-decoration: underline; /* Optional hover effect */
+  }
+
+</style>
+ </head>
+
+ <body>
+<pre>
+cms.EDProducer("HGCalRecHitProducer",\ 
+    HGCEE_cce = cms.PSet(\ 
+        refToPSet_ = cms.string('HGCAL_chargeCollectionEfficiencies')\ 
+  ----------------------------------------------------------
+  cms.PSet(\ 
+      values = cms.vdouble(1.0, 1.0, 1.0)\ 
+  )\ 
+  ----------------------------------------------------------
+      ),\ 
+      HGCEE_fCPerMIP = cms.vdouble(2.06, 3.43, 5.15),\ 
+      HGCEE_isSiFE = cms.bool(True),\ 
+      HGCEE_keV2DIGI = cms.double(0.044259),\ 
+      HGCEE_noise_fC = cms.PSet(\ 
+          refToPSet_ = cms.string('HGCAL_noise_fC')\ 
+    ----------------------------------------------------------
+    cms.PSet(\ 
+        doseMap = cms.string(''),\ 
+        scaleByDose = cms.bool(False),\ 
+        scaleByDoseAlgo = cms.uint32(0),\ 
+        scaleByDoseFactor = cms.double(1),\ 
+        values = cms.vdouble(0.32041011999999996, 0.384492144, 0.32041011999999996)\ 
+    )\ 
+    ----------------------------------------------------------
+        ),\ 
+        HGCEErechitCollection = cms.string('HGCEERecHits'),\ 
+        HGCEEuncalibRecHitCollection = cms.InputTag("hltHGCalUncalibRecHit","HGCEEUncalibRecHits"),\ 
+        HGCHEB_isSiFE = cms.bool(True),\ 
+        HGCHEB_keV2DIGI = cms.double(0.00148148148148),\ 
+        HGCHEB_noise_MIP = cms.PSet(\ 
+            refToPSet_ = cms.string('HGCAL_noise_heback')\ 
+      ----------------------------------------------------------
+      cms.PSet(\ 
+          doseMap = cms.string(''),\ 
+          noise_MIP = cms.double(0.01),\ 
+          referenceIdark = cms.double(-1),\ 
+          referenceXtalk = cms.double(-1),\ 
+          scaleByDose = cms.bool(False),\ 
+          scaleByDoseAlgo = cms.uint32(0),\ 
+          scaleByDoseFactor = cms.double(1),\ 
+          sipmMap = cms.string('')\ 
+      )\ 
+      ----------------------------------------------------------
+          ),\ 
+          HGCHEBrechitCollection = cms.string('HGCHEBRecHits'),\ 
+          HGCHEBuncalibRecHitCollection = cms.InputTag("hltHGCalUncalibRecHit","HGCHEBUncalibRecHits"),\ 
+          HGCHEF_cce = cms.PSet(\ 
+              refToPSet_ = cms.string('HGCAL_chargeCollectionEfficiencies')\ 
+        ----------------------------------------------------------
+        cms.PSet(\ 
+            values = cms.vdouble(1.0, 1.0, 1.0)\ 
+        )\ 
+        ----------------------------------------------------------
+            ),\ 
+            HGCHEF_fCPerMIP = cms.vdouble(2.06, 3.43, 5.15),\ 
+            HGCHEF_isSiFE = cms.bool(True),\ 
+            HGCHEF_keV2DIGI = cms.double(0.044259),\ 
+            HGCHEF_noise_fC = cms.PSet(\ 
+                refToPSet_ = cms.string('HGCAL_noise_fC')\ 
+          ----------------------------------------------------------
+          cms.PSet(\ 
+              doseMap = cms.string(''),\ 
+              scaleByDose = cms.bool(False),\ 
+              scaleByDoseAlgo = cms.uint32(0),\ 
+              scaleByDoseFactor = cms.double(1),\ 
+              values = cms.vdouble(0.32041011999999996, 0.384492144, 0.32041011999999996)\ 
+          )\ 
+          ----------------------------------------------------------
+              ),\ 
+              HGCHEFrechitCollection = cms.string('HGCHEFRecHits'),\ 
+              HGCHEFuncalibRecHitCollection = cms.InputTag("hltHGCalUncalibRecHit","HGCHEFUncalibRecHits"),\ 
+              HGCHFNose_cce = cms.PSet(\ 
+                  refToPSet_ = cms.string('HGCAL_chargeCollectionEfficiencies')\ 
+            ----------------------------------------------------------
+            cms.PSet(\ 
+                values = cms.vdouble(1.0, 1.0, 1.0)\ 
+            )\ 
+            ----------------------------------------------------------
+                ),\ 
+                HGCHFNose_fCPerMIP = cms.vdouble(1.25, 2.57, 3.88),\ 
+                HGCHFNose_isSiFE = cms.bool(False),\ 
+                HGCHFNose_keV2DIGI = cms.double(0.044259),\ 
+                HGCHFNose_noise_fC = cms.PSet(\ 
+                    refToPSet_ = cms.string('HGCAL_noise_fC')\ 
+              ----------------------------------------------------------
+              cms.PSet(\ 
+                  doseMap = cms.string(''),\ 
+                  scaleByDose = cms.bool(False),\ 
+                  scaleByDoseAlgo = cms.uint32(0),\ 
+                  scaleByDoseFactor = cms.double(1),\ 
+                  values = cms.vdouble(0.32041011999999996, 0.384492144, 0.32041011999999996)\ 
+              )\ 
+              ----------------------------------------------------------
+                  ),\ 
+                  HGCHFNoserechitCollection = cms.string('HGCHFNoseRecHits'),\ 
+                  HGCHFNoseuncalibRecHitCollection = cms.InputTag("hltHGCalUncalibRecHit","HGCHFNoseUncalibRecHits"),\ 
+                  algo = cms.string('HGCalRecHitWorkerSimple'),\ 
+                  constSiPar = cms.double(0.02),\ 
+                  deltasi_index_regemfac = cms.int32(3),\ 
+                  layerNoseWeights = cms.vdouble(\ 
+                      0.0, 39.500245, 39.756638, 39.756638, 39.756638,\ 
+                      39.756638, 66.020266, 92.283895, 92.283895\ 
+                  ),\ 
+                  layerWeights = cms.vdouble(\ 
+                      0.0, 9.205, 11.129999999999999, 11.129999999999999, 11.129999999999999,\ 
+                      11.129999999999999, 11.129999999999999, 11.129999999999999, 11.129999999999999, 11.129999999999999,\ 
+                      11.129999999999999, 11.129999999999999, 11.129999999999999, 11.129999999999999, 11.129999999999999,\ 
+                      11.129999999999999, 11.129999999999999, 11.129999999999999, 13.2, 13.2,\ 
+                      13.2, 13.2, 13.2, 13.2, 13.2,\ 
+                      13.2, 35.745000000000005, 59.665000000000006, 60.7, 60.7,\ 
+                      60.7, 60.7, 60.7, 60.7, 60.7,\ 
+                      60.7, 60.7, 71.89, 83.08, 83.255,\ 
+                      83.52000000000001, 83.61, 83.61, 83.61, 83.61,\ 
+                      83.61, 83.61, 83.61\ 
+                  ),\ 
+                  maxValSiPar = cms.double(10000.0),\ 
+                  minValSiPar = cms.double(10.0),\ 
+                  noiseSiPar = cms.double(5.5),\ 
+                  rangeMask = cms.uint32(4294442496),\ 
+                  rangeMatch = cms.uint32(1161838592),\ 
+                  sciThicknessCorrection = cms.double(0.69),\ 
+                  thicknessCorrection = cms.vdouble(\ 
+                      0.75, 0.76, 0.75, 0.85, 0.85,\ 
+                      0.84\ 
+                  ),\ 
+                  thicknessNoseCorrection = cms.vdouble(1.132, 1.092, 1.084)\ 
+              )\ 
+              

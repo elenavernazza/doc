@@ -1,0 +1,96 @@
+
+<html>
+ <head>
+  <title>Config Browser</title>
+  <style type="text/css">
+  ol {
+   font-family: Arial;
+   font-size: 10pt;
+   padding-left: 25px;
+  }
+  .sequence {
+   font-weight: bold;
+  }
+  .task {
+   font-weight: bold;
+  }
+  li.Path       {font-style:bold;   color: #03C;}
+  li.Task       {font-style:bold;   color: #3465A4;}
+  li.sequence   {font-style:bold;   color: #09F;}
+  li.task       {font-style:bold;   color: #FF6666;}
+  li.EDProducer {font-style:italic; color: #a80000;}
+  li.EDFilter   {font-style:bold; color: #F90;}
+  li.EDAnalyzer {font-style:italic; color: #360;}
+  li.SwitchProducer {font-style:italic; color: #4e9a06;}
+  li.SequenceIgnore {font-style:bold; color: #a800a8;}
+  li.SequenceNegation {font-style:bold; color: #a800a8;}
+  .github-link {
+      color: #ce5c00; /* Custom blue color */
+      text-decoration: none; /* Remove underline if desired */
+  }
+
+  .github-link:hover {
+      color: #4e9a06; /* Change color on hover */
+      text-decoration: underline; /* Optional hover effect */
+  }
+
+</style>
+ </head>
+
+ <body>
+<pre>
+cms.EDProducer("HGCalLayerClusterProducer",\ 
+    detector = cms.string('EE'),\ 
+    mightGet = cms.optional.untracked.vstring,\ 
+    nHitsTime = cms.uint32(3),\ 
+    plugin = cms.PSet(\ 
+        dEdXweights = cms.vdouble(\ 
+            0.0, 9.205, 11.129999999999999, 11.129999999999999, 11.129999999999999,\ 
+            11.129999999999999, 11.129999999999999, 11.129999999999999, 11.129999999999999, 11.129999999999999,\ 
+            11.129999999999999, 11.129999999999999, 11.129999999999999, 11.129999999999999, 11.129999999999999,\ 
+            11.129999999999999, 11.129999999999999, 11.129999999999999, 13.2, 13.2,\ 
+            13.2, 13.2, 13.2, 13.2, 13.2,\ 
+            13.2, 35.745000000000005, 59.665000000000006, 60.7, 60.7,\ 
+            60.7, 60.7, 60.7, 60.7, 60.7,\ 
+            60.7, 60.7, 71.89, 83.08, 83.255,\ 
+            83.52000000000001, 83.61, 83.61, 83.61, 83.61,\ 
+            83.61, 83.61, 83.61\ 
+        ),\ 
+        deltac = cms.vdouble(1.3, 1.3, 1.3, 0.0315),\ 
+        deltasi_index_regemfac = cms.int32(3),\ 
+        dependSensor = cms.bool(True),\ 
+        ecut = cms.double(3),\ 
+        fcPerEle = cms.double(0.00016020506),\ 
+        fcPerMip = cms.vdouble(\ 
+            2.06, 3.43, 5.15, 2.06, 3.43,\ 
+            5.15\ 
+        ),\ 
+        kappa = cms.double(9),\ 
+        maxNumberOfThickIndices = cms.uint32(6),\ 
+        noiseMip = cms.PSet(\ 
+            noise_MIP = cms.double(0.01),\ 
+            referenceIdark = cms.double(-1),\ 
+            referenceXtalk = cms.double(-1),\ 
+            scaleByDose = cms.bool(False),\ 
+            scaleByDoseAlgo = cms.uint32(0),\ 
+            scaleByDoseFactor = cms.double(1)\ 
+        ),\ 
+        noises = cms.vdouble(\ 
+            2000.0, 2400.0, 2000.0, 2000.0, 2400.0,\ 
+            2000.0\ 
+        ),\ 
+        positionDeltaRho2 = cms.double(1.69),\ 
+        sciThicknessCorrection = cms.double(0.69),\ 
+        thicknessCorrection = cms.vdouble(\ 
+            0.75, 0.76, 0.75, 0.85, 0.85,\ 
+            0.84\ 
+        ),\ 
+        thresholdW0 = cms.vdouble(2.9, 2.9, 2.9),\ 
+        type = cms.string('SiCLUE'),\ 
+        use2x2 = cms.bool(True),\ 
+        verbosity = cms.untracked.uint32(3)\ 
+    ),\ 
+    recHits = cms.InputTag("hltHGCalRecHit","HGCEERecHits"),\ 
+    timeClname = cms.string('timeLayerCluster')\ 
+)\ 
+

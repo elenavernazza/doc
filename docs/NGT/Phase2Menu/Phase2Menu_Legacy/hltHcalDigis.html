@@ -1,0 +1,64 @@
+
+<html>
+ <head>
+  <title>Config Browser</title>
+  <style type="text/css">
+  ol {
+   font-family: Arial;
+   font-size: 10pt;
+   padding-left: 25px;
+  }
+  .sequence {
+   font-weight: bold;
+  }
+  .task {
+   font-weight: bold;
+  }
+  li.Path       {font-style:bold;   color: #03C;}
+  li.Task       {font-style:bold;   color: #3465A4;}
+  li.sequence   {font-style:bold;   color: #09F;}
+  li.task       {font-style:bold;   color: #FF6666;}
+  li.EDProducer {font-style:italic; color: #a80000;}
+  li.EDFilter   {font-style:bold; color: #F90;}
+  li.EDAnalyzer {font-style:italic; color: #360;}
+  li.SwitchProducer {font-style:italic; color: #4e9a06;}
+  li.SequenceIgnore {font-style:bold; color: #a800a8;}
+  li.SequenceNegation {font-style:bold; color: #a800a8;}
+  .github-link {
+      color: #ce5c00; /* Custom blue color */
+      text-decoration: none; /* Remove underline if desired */
+  }
+
+  .github-link:hover {
+      color: #4e9a06; /* Change color on hover */
+      text-decoration: underline; /* Optional hover effect */
+  }
+
+</style>
+ </head>
+
+ <body>
+<pre>
+cms.EDProducer("HcalRawToDigi",\ 
+    ComplainEmptyData = cms.untracked.bool(False),\ 
+    ElectronicsMap = cms.string(''),\ 
+    ExpectedOrbitMessageTime = cms.untracked.int32(-1),\ 
+    FEDs = cms.untracked.vint32(),\ 
+    FilterDataQuality = cms.bool(True),\ 
+    HcalFirstFED = cms.untracked.int32(700),\ 
+    InputLabel = cms.InputTag("rawDataCollector"),\ 
+    UnpackCalib = cms.untracked.bool(True),\ 
+    UnpackTTP = cms.untracked.bool(True),\ 
+    UnpackUMNio = cms.untracked.bool(True),\ 
+    UnpackZDC = cms.untracked.bool(True),\ 
+    UnpackerMode = cms.untracked.int32(0),\ 
+    firstSample = cms.int32(0),\ 
+    lastSample = cms.int32(9),\ 
+    mightGet = cms.optional.untracked.vstring,\ 
+    saveQIE10DataNSamples = cms.untracked.vint32(),\ 
+    saveQIE10DataTags = cms.untracked.vstring(),\ 
+    saveQIE11DataNSamples = cms.untracked.vint32(),\ 
+    saveQIE11DataTags = cms.untracked.vstring(),\ 
+    silent = cms.untracked.bool(True)\ 
+)\ 
+

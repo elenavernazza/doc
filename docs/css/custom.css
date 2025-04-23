@@ -1,0 +1,39 @@
+details {
+    background-color: white; /* Change background color */
+    border: 0px solid white; /* Optional: Add border */
+    padding: 0px;
+    border-radius: 0px;
+}
+
+/* Remove the default blue focus outline */
+details:focus,
+details:focus-visible,
+details[open] {
+    outline: none; 
+    border-color: white; /* Ensures border remains consistent */
+}
+
+details summary {
+    background-color: white; /* Change summary background color */
+    color: purple; /* Change summary text color */
+    padding: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+/* Reduce font size */
+body {
+    font-size: 2px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}

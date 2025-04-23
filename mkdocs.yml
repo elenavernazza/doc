@@ -1,0 +1,97 @@
+site_name: Elena's Documentation
+
+theme:
+  name: 'material'
+  font: 
+    text: Inter
+  font-size:
+    text: 9px
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: 'pink'
+      accent: 'purple'
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: 'teal'
+      accent: 'cyan'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - css/custom.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - search
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+# Page tree
+nav:
+  - Home:
+    - Build your documentation: Introduction/intro.md
+
+  - Dummies:
+    - General: Dummies/GeneralCommands.md
+    - CMSSW: Dummies/CMSSWCommands.md
+    - Git: Dummies/GitCommands.md
+  - NGT:
+    - General:
+      - HLT Tutorial: NGT/General/HLTTutorial.md
+    - Phase 2 HLT Menu:
+      - Getting started: NGT/Phase2Menu/GettingStarted.md
+      - Phase 2 Menu - Default: NGT/Phase2Menu/Phase2Menu_Legacy
+      - Phase 2 Menu - Alpaka: NGT/Phase2Menu/Phase2Menu_Alpaka
+      - Phase 2 Menu - TICLv5: NGT/Phase2Menu/Phase2Menu_TICLv5
+      - List of paths: 
+        - HLT_AK4PFPuppiJet520: NGT/Phase2Menu/Paths/HLT_AK4PFPuppiJet520.md
+        - HLT_Diphoton30_23_IsoCaloId_L1Seeded: NGT/Phase2Menu/Paths/HLT_Diphoton30_23_IsoCaloId_L1Seeded.md
+        - HLT_Diphoton30_23_IsoCaloId_Unseeded: NGT/Phase2Menu/Paths/HLT_Diphoton30_23_IsoCaloId_Unseeded.md
+        - HLT_DoubleEle23_12_Iso_L1Seeded: NGT/Phase2Menu/Paths/HLT_DoubleEle23_12_Iso_L1Seeded.md
+        - HLT_DoubleEle25_CaloIdL_PMS2_L1Seeded: NGT/Phase2Menu/Paths/HLT_DoubleEle25_CaloIdL_PMS2_L1Seeded.md
+        - HLT_DoubleEle25_CaloIdL_PMS2_Unseeded: NGT/Phase2Menu/Paths/HLT_DoubleEle25_CaloIdL_PMS2_Unseeded.md
+        - HLT_DoubleMediumChargedIsoPFTauHPS40_eta2p1: NGT/Phase2Menu/Paths/HLT_DoubleMediumChargedIsoPFTauHPS40_eta2p1.md
+        - HLT_DoubleMediumDeepTauPFTauHPS35_eta2p1: NGT/Phase2Menu/Paths/HLT_DoubleMediumDeepTauPFTauHPS35_eta2p1.md
+        - HLT_DoublePFPuppiJets128_DoublePFPuppiBTagDeepCSV_2p4: NGT/Phase2Menu/Paths/HLT_DoublePFPuppiJets128_DoublePFPuppiBTagDeepCSV_2p4.md
+        - HLT_DoublePFPuppiJets128_DoublePFPuppiBTagDeepFlavour_2p4: NGT/Phase2Menu/Paths/HLT_DoublePFPuppiJets128_DoublePFPuppiBTagDeepFlavour_2p4.md
+        - HLT_Ele115_NonIso_L1Seeded: NGT/Phase2Menu/Paths/HLT_Ele115_NonIso_L1Seeded.md
+        - HLT_Ele26_WP70_L1Seeded: NGT/Phase2Menu/Paths/HLT_Ele26_WP70_L1Seeded.md
+        - HLT_Ele26_WP70_Unseeded: NGT/Phase2Menu/Paths/HLT_Ele26_WP70_Unseeded.md
+        - HLT_Ele30_WPTight_L1Seeded_LooseDeepTauPFTauHPS30_eta2p1_CrossL1: NGT/Phase2Menu/Paths/HLT_Ele30_WPTight_L1Seeded_LooseDeepTauPFTauHPS30_eta2p1_CrossL1.md
+        - HLT_Ele32_WPTight_L1Seeded: NGT/Phase2Menu/Paths/HLT_Ele32_WPTight_L1Seeded.md
+        - HLT_Ele32_WPTight_Unseeded: NGT/Phase2Menu/Paths/HLT_Ele32_WPTight_Unseeded.md
+        - HLT_IsoMu20_eta2p1_LooseDeepTauPFTauHPS27_eta2p1_CrossL1: NGT/Phase2Menu/Paths/HLT_IsoMu20_eta2p1_LooseDeepTauPFTauHPS27_eta2p1_CrossL1.md
+        - HLT_IsoMu24_FromL1TkMuon: NGT/Phase2Menu/Paths/HLT_IsoMu24_FromL1TkMuon.md
+        - HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_FromL1TkMuon: NGT/Phase2Menu/Paths/HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_FromL1TkMuon.md
+        - HLT_Mu37_Mu27_FromL1TkMuon: NGT/Phase2Menu/Paths/HLT_Mu37_Mu27_FromL1TkMuon.md
+        - HLT_Mu50_FromL1TkMuon: NGT/Phase2Menu/Paths/HLT_Mu50_FromL1TkMuon.md
+        - HLT_PFHT200PT30_QuadPFPuppiJet_70_40_30_30_TriplePFPuppiBTagDeepCSV_2p4: NGT/Phase2Menu/Paths/HLT_PFHT200PT30_QuadPFPuppiJet_70_40_30_30_TriplePFPuppiBTagDeepCSV_2p4.md
+        - HLT_PFHT200PT30_QuadPFPuppiJet_70_40_30_30_TriplePFPuppiBTagDeepFlavour_2p4: NGT/Phase2Menu/Paths/HLT_PFHT200PT30_QuadPFPuppiJet_70_40_30_30_TriplePFPuppiBTagDeepFlavour_2p4.md
+        - HLT_PFHT330PT30_QuadPFPuppiJet_75_60_45_40_TriplePFPuppiBTagDeepCSV_2p4: NGT/Phase2Menu/Paths/HLT_PFHT330PT30_QuadPFPuppiJet_75_60_45_40_TriplePFPuppiBTagDeepCSV_2p4.md
+        - HLT_PFHT330PT30_QuadPFPuppiJet_75_60_45_40_TriplePFPuppiBTagDeepFlavour_2p4: NGT/Phase2Menu/Paths/HLT_PFHT330PT30_QuadPFPuppiJet_75_60_45_40_TriplePFPuppiBTagDeepFlavour_2p4.md
+        - HLT_PFPuppiHT1070: NGT/Phase2Menu/Paths/HLT_PFPuppiHT1070.md
+        - HLT_PFPuppiMETTypeOne140_PFPuppiMHT140: NGT/Phase2Menu/Paths/HLT_PFPuppiMETTypeOne140_PFPuppiMHT140.md
+        - HLT_Photon108EB_TightID_TightIso_L1Seeded: NGT/Phase2Menu/Paths/HLT_Photon108EB_TightID_TightIso_L1Seeded.md
+        - HLT_Photon108EB_TightID_TightIso_Unseeded: NGT/Phase2Menu/Paths/HLT_Photon108EB_TightID_TightIso_Unseeded.md
+        - HLT_Photon187_L1Seeded: NGT/Phase2Menu/Paths/HLT_Photon187_L1Seeded.md
+        - HLT_Photon187_Unseeded: NGT/Phase2Menu/Paths/HLT_Photon187_Unseeded.md
+        - HLT_TriMu_10_5_5_DZ_FromL1TkMuon: NGT/Phase2Menu/Paths/HLT_TriMu_10_5_5_DZ_FromL1TkMuon.md
+
+    - The Optimizer: 
+      - Getting started: NGT/PixelPatatrack/TheOptimizer/GettingStarted.md
+      - Running the optimization: NGT/PixelPatatrack/TheOptimizer/Running.md

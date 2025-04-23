@@ -1,0 +1,62 @@
+
+<html>
+ <head>
+  <title>Config Browser</title>
+  <style type="text/css">
+  ol {
+   font-family: Arial;
+   font-size: 10pt;
+   padding-left: 25px;
+  }
+  .sequence {
+   font-weight: bold;
+  }
+  .task {
+   font-weight: bold;
+  }
+  li.Path       {font-style:bold;   color: #03C;}
+  li.Task       {font-style:bold;   color: #3465A4;}
+  li.sequence   {font-style:bold;   color: #09F;}
+  li.task       {font-style:bold;   color: #FF6666;}
+  li.EDProducer {font-style:italic; color: #a80000;}
+  li.EDFilter   {font-style:bold; color: #F90;}
+  li.EDAnalyzer {font-style:italic; color: #360;}
+  li.SwitchProducer {font-style:italic; color: #4e9a06;}
+  li.SequenceIgnore {font-style:bold; color: #a800a8;}
+  li.SequenceNegation {font-style:bold; color: #a800a8;}
+  .github-link {
+      color: #ce5c00; /* Custom blue color */
+      text-decoration: none; /* Remove underline if desired */
+  }
+
+  .github-link:hover {
+      color: #4e9a06; /* Change color on hover */
+      text-decoration: underline; /* Optional hover effect */
+  }
+
+</style>
+ </head>
+
+ <body>
+<pre>
+cms.EDProducer("DeepFlavourTagInfoProducer",\ 
+    candidates = cms.InputTag("hltParticleFlowTmp"),\ 
+    compute_probabilities = cms.bool(False),\ 
+    fallback_puppi_weight = cms.bool(False),\ 
+    fallback_vertex_association = cms.bool(False),\ 
+    flip = cms.bool(False),\ 
+    jet_radius = cms.double(0.4),\ 
+    jets = cms.InputTag("hltPFPuppiJetForBtagEta2p4"),\ 
+    max_jet_eta = cms.double(2.5),\ 
+    mightGet = cms.optional.untracked.vstring,\ 
+    min_candidate_pt = cms.double(0.95),\ 
+    min_jet_pt = cms.double(15),\ 
+    puppi_value_map = cms.InputTag("hltPFPuppi"),\ 
+    run_deepVertex = cms.bool(False),\ 
+    secondary_vertices = cms.InputTag("hltDeepInclusiveSecondaryVerticesPF"),\ 
+    shallow_tag_infos = cms.InputTag("hltDeepCombinedSecondaryVertexBJetTagsInfosPuppiModEta2p4"),\ 
+    unsubjet_map = cms.InputTag(""),\ 
+    vertex_associator = cms.InputTag("hltPrimaryVertexAssociationModEta2p4","original"),\ 
+    vertices = cms.InputTag("hltOfflinePrimaryVertices")\ 
+)\ 
+
