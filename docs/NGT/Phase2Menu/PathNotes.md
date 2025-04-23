@@ -1,4 +1,4 @@
-# Paths and descriptions - Legacy HLT Menu
+<!-- # Paths and descriptions - Legacy HLT Menu
 
 1. HLT_AK4PFPuppiJet520
 
@@ -464,4 +464,4 @@
     | Different MinPt for different eta regions:    |                       |
     |    - $0<\|\eta\|<1.5$                         | $p_T>166.1$ GeV       |
     |    - $1.5<\|\eta\|<2.4$                       | $p_T>128.51$ GeV      |
-    |    - $\|\eta\|>2.4$                           | $p_T>139.1$ GeV       |
+    |    - $\|\eta\|>2.4$                           | $p_T>139.1$ GeV       | -->
