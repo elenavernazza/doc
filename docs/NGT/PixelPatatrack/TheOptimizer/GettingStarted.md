@@ -1,4 +1,4 @@
-# Intructions to run The Optimizer
+# Documenatation for The Optimizer
 
 Follow the instructions in the README of the main repository: [cms-ngt-hlt/cms-reco-optimizer](https://github.com/cms-ngt-hlt/cms-reco-optimizer/tree/PixelPatatrackDev?tab=readme-ov-file#installation)
 
